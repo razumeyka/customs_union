@@ -1,0 +1,245 @@
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-Regular.otf')  format('opentype'),
+	     url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf')  format('truetype'), url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-Bold.otf')  format('opentype'),
+	     url('../fonts/ProximaNova-Bold.woff') format('woff'), url('../fonts/ProximaNova-Bold.ttf')  format('truetype'), url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-Black.otf')  format('opentype'),
+	     url('../fonts/ProximaNova-Black.woff') format('woff'), url('../fonts/ProximaNova-Black.ttf')  format('truetype'), url('../fonts/ProximaNova-Black.svg#ProximaNova-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+body{
+	margin:0;
+	padding: 0;
+	font-family: 'ProximaNova', sans-serif;
+	font-size: 15px;
+	line-height:1.4;
+    letter-spacing: 0.05em;
+	color: rgb(0, 0, 0);
+	min-width: 360px;
+}
+
+.wrapper {
+     max-width:1200px;
+     padding:0 40px;
+     margin:0 auto;
+}
+
+header .first_line {
+    background-color: #304a9a;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+header .first_line .wrapper, header .second_line .wrapper, .main_screen .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header .first_line .group {
+    text-align: left;
+    text-transform: uppercase;
+}
+
+header .first_line .territory {
+    text-align: right;
+}
+
+header .second_line {
+    padding: 8px 0;
+}
+
+header .logo {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../img/sprites.svg);
+    background-position: -7px -1px;
+    width: 310px;
+    height: 80px;
+}
+
+header .phones .handset {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../img/sprites.svg);
+    background-position: -10px -121px;
+    width: 80px;
+    height: 80px;
+    margin-right: 13px;
+}
+
+header .phones .inner {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header .phones a {
+    font-size: 24px;
+    color: rgb(20, 31, 64);
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+}
+
+header .phones .free {
+    font-size: 14px;
+    color: rgb(48, 74, 154);
+    font-weight: 400;
+    text-align: left;
+}
+
+/*main_screen*/
+
+.main_screen {
+    background: url(../img/logo_pattern.png) #46aeff;
+    padding: 30px 0;
+}
+
+.main_screen .circle {
+    border-radius: 50%;
+    background-color: rgba(255, 228, 152, 0.161);
+}
+
+.main_screen .small_circle {
+    border-radius: 50%;
+    background-color: rgba(255, 228, 152, 0.29);
+}
+
+.main_screen .circle_wrapper {
+    box-sizing: border-box;
+    border: 6px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-image: -moz-linear-gradient( -90deg, rgb(255,218,118) 31%, rgb(255,193,24) 100%);
+    background-image: -webkit-linear-gradient( -90deg, rgb(255,218,118) 31%, rgb(255,193,24) 100%);
+    background-image: -ms-linear-gradient( -90deg, rgb(255,218,118) 31%, rgb(255,193,24) 100%);
+    opacity: 0.7;
+    position: absolute;
+    left: 478px;
+    top: 392px;
+    width: 292px;
+    height: 292px;
+    padding: 30px;
+}
+
+.main_screen .circle_wrapper .icon {
+    background-image: url(../img/sprites.svg);
+    background-position: -10px -239px;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.main_screen .circle_wrapper .text {
+    font-size: 18px;
+    color: rgb(20, 31, 64);
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main_screen .form {
+    box-sizing: border-box;
+    border: 6px solid rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
+    max-width: 480px;
+    height: 100%;
+    padding: 40px;
+}
+
+.main_screen .form h1 {
+    font-size: 38px;
+    font-weight: 900;
+    color: rgb(20, 31, 64);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main_screen .form .figures {
+    font-size: 26px;
+    font-weight: 400;
+    color: rgb(36, 55, 115);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main_screen .form .wpcf7-form-control {
+    box-sizing: border-box;
+    border: 1px solid rgb(203, 203, 203);
+    height: 50px;
+    width: 100%;
+    font-size: 17px;
+    color: rgb(96, 96, 96);
+    font-weight: 400;
+    text-align: left;  
+    outline: none;
+    padding-left: 15px;
+    margin: 10px 0;
+}
+
+.main_screen .form .button {
+    display:inline-block;
+    background-color: #304a9a;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    padding: 20px;
+    margin: 15px 0;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.main_screen .form .guarantee {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(124, 124, 124);
+    text-align: center;
+    padding-left: 20px;
+    position: relative;
+} 
+
+.main_screen .form .guarantee::before {
+    content: "";
+    background-image: url(../img/sprites.svg);
+    background-position: -71px -642px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+}
+
+/*media*/
+
+@media screen and (max-width: 767px) {
+
+}
+
+
+
+
+
+
+
+
