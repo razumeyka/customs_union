@@ -63,6 +63,12 @@ body{
      margin:0 auto;
 }
 
+header {
+    box-sizing: border-box;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
 header .first_line {
     background-color: #304a9a;
     font-family: 'ProximaNova';
@@ -189,8 +195,8 @@ header .phones .free {
     height: 0;
     border-radius: 50%;
     background-color: rgba(255, 228, 152, 0.29);
-    -webkit-animation: ripple 0.7s ease-out infinite;
-	animation: ripple 0.7s ease-out infinite;
+    -webkit-animation: pulse 0.7s ease-out infinite;
+	animation: pulse 0.7s ease-out infinite;
     z-index: 1;
 }
 
@@ -206,16 +212,16 @@ header .phones .free {
     height: 0;
     border-radius: 50%;
     background-color: rgba(255, 228, 152, 0.161);
-    -webkit-animation: ripple 0.7s ease-out infinite;
-	animation: ripple 0.7s ease-out infinite;
+    -webkit-animation: pulse 0.7s ease-out infinite;
+	animation: pulse 0.7s ease-out infinite;
     z-index: 0;
 }
 
-@-webkit-keyframes ripple {
+@-webkit-keyframes pulse {
 	from {width:298px;height:298px;}
 	to {width:335px;height:335px;}
 }
-@keyframes ripple {
+@keyframes pulse {
 	from {width:298px;height:298px;}
 	to {width:335px;height:335px;}
 }
@@ -226,6 +232,8 @@ header .phones .free {
     width: 80px;
     height: 80px;
     margin: 0 auto 10px;
+    position: relative;
+    z-index: 3;
 }
 
 .main_screen .circle .text {
@@ -234,6 +242,8 @@ header .phones .free {
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
+    position: relative;
+    z-index: 3;
 }
 
 .main_screen .form {
@@ -264,11 +274,12 @@ header .phones .free {
     padding: 10px 0;
 }
 
-.main_screen .form .wpcf7-form-control {
+.form .input .wpcf7-form-control {
     box-sizing: border-box;
     border: 1px solid rgb(203, 203, 203);
     height: 62px;
     width: 100%;
+    font-family: "ProximaNova";
     font-size: 17px;
     color: rgb(96, 96, 96);
     font-weight: 400;
@@ -278,7 +289,7 @@ header .phones .free {
     margin: 9px 0;
 }
 
-.main_screen .form .button {
+.button {
     display:inline-block;
     background-color: #304a9a;
     box-sizing: border-box;
@@ -295,7 +306,7 @@ header .phones .free {
     font-weight: 700;
 }
 
-.main_screen .form .guarantee {
+.form .guarantee {
     font-size: 16px;
     font-weight: 400;
     color: rgb(124, 124, 124);
@@ -304,7 +315,7 @@ header .phones .free {
     position: relative;
 } 
 
-.main_screen .form .guarantee::before {
+.form .guarantee::before {
     content: "";
     background-image: url(../img/sprites.svg);
     background-position: -74px -642px;
@@ -317,20 +328,19 @@ header .phones .free {
 /*advantages*/
 
 .advantages_screen {
-    padding: 150px 0;
+    padding: 150px 0 250px;
 }
 
-.advantages_screen h2 {
+h2 {
     font-size: 42px;
     font-weight: 900;
     color: rgb(20, 31, 64);
     text-transform: uppercase;
-    line-height: 1.143;
     text-align: center;
     margin: 0;
 }
 
-.advantages_screen .process {
+.caption {
     font-size: 30px;
     font-weight: 400;
     color: rgb(48, 74, 154);
@@ -348,7 +358,12 @@ header .phones .free {
     box-sizing: border-box;
     background-color: #304a9a;
     width: 50%;
-    padding: 5px 80px 5px 107px;
+    padding: 5px 127px 5px 0;
+}
+
+.advantages_screen .advantages .items .inner {
+    max-width: 600px;
+    margin: 0 0 0 auto;
 }
 
 .advantages_screen .advantages .item {
@@ -361,8 +376,9 @@ header .phones .free {
     line-height: 1.75;
     text-transform: uppercase;
     padding-left: 20px;
-    margin: 47px 0;
+    margin: 47px 0 47px auto;
     position: relative;
+    max-width: 405px;
 }
 
 .advantages_screen .advantages .item::before {
@@ -399,7 +415,12 @@ header .phones .free {
     box-sizing: border-box;
     background-color: #e9e9e9;
     width: 50%;
-    padding: 46px 30px 46px 0;
+    padding: 46px 0;
+}
+
+.advantages_screen .advantages .video .inner {
+    max-width: 600px;
+    margin: 0 auto 0 0;
 }
 
 .advantages_screen .advantages .video .to_learn {
@@ -428,6 +449,7 @@ header .phones .free {
 .advantages_screen .advantages .video a {
     display: block;
     background-image: url(../img/video_preview.jpg);
+    background-position: center center;
     max-width: 546px;
     height: 346px;
     margin: 25px 0 13px auto;
@@ -462,6 +484,221 @@ header .phones .free {
     text-align: right;
 }
 
+/*value_screen*/
+
+.value_screen {
+    background-image: url(../img/form_bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 743px;
+    position: relative; 
+}
+
+.value_screen .form {
+    box-sizing: border-box;
+    border: 6px solid rgb(255, 211, 90);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
+    max-width: 660px;
+    position: absolute;
+    top: -140px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 64px 74px 47px;
+    text-align: left;
+}
+
+.value_screen .form .value {
+    font-size: 38px;
+    font-weight: 900;
+    color: rgb(20, 31, 64);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.value_screen .form .value_caption {
+    font-size: 26px;
+    font-weight: 400;
+    color: rgb(36, 55, 115);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 13px 0 24px;
+}
+
+.value_screen .form .wpcf7-form-control-wrap textarea {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid rgb(203, 203, 203);
+    height: 170px;
+    width: 100%;
+    font-family: "ProximaNova";
+    font-size: 17px;
+    color: rgb(96, 96, 96);
+    font-weight: 400; 
+    outline: none;
+    resize: none;
+    padding: 20px;
+    margin: 9px 0;
+}
+
+.value_screen .form .label {
+    font-size: 20px;
+    font-family: "ProximaNova";
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+.value_screen .form .term {
+    margin: 24px 0 27px;
+}
+
+.value_screen .form .term .wpcf7-form-control-wrap {
+    display: block;
+    margin: 12px 0;
+}
+
+.value_screen .form .term .wpcf7-list-item {
+    display: inline-block;
+    padding: 10px 35px 10px 30px;
+}
+
+.value_screen .form .term .wpcf7-list-item .wpcf7-list-item-label {
+    font-size: 17px;
+    font-family: "ProximaNova";
+    color: rgb(0, 0, 0);
+    padding-left: 5px;
+}
+
+/*radio_button*/
+
+.value_screen .form input[type="radio"], .value_screen .form input[type="file"] {
+    display: none;
+}
+
+.value_screen .form .term .wpcf7-list-item .radio_ripple {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 3px solid rgb(196, 196, 196);
+    position: relative;
+    margin: 0 5px 0 -30px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    vertical-align: middle;
+    -webkit-transition: border-color 0.2s ease-in 0s;
+    transition: border-color 0.2s ease-in 0s;
+}
+
+.value_screen .form .term .wpcf7-list-item .radio_ripple:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    margin: auto;
+    width: 22px;
+    height: 22px;
+    background: rgb(70, 174, 255);
+    border-radius: 50%;
+    z-index: 1;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s;
+}
+
+.value_screen .form .term .wpcf7-list-item .radio_ripple:after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    bottom: -15px;
+    left: -15px;
+    right: -15px;
+    margin: auto;
+    width: 0;
+    height: 0;
+    background: rgba(70, 174, 255, 0.5);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.value_screen .form .term .wpcf7-list-item.active .radio_ripple{
+	border-color: rgb(70, 174, 255);
+}
+
+.value_screen .form .term .wpcf7-list-item.active .radio_ripple:before{
+	-webkit-transform: scale(.5);
+	transform: scale(.5);
+}
+
+.value_screen .form .term .wpcf7-list-item.active .radio_ripple:after{
+	-webkit-animation: ripple 0.3s ease-out;
+	animation: ripple 0.3s ease-out;
+}
+
+@-webkit-keyframes ripple {
+	from {width:0;height:0;opacity:1;}
+	to {width:47px;height:47px;opacity:0;}
+}
+
+@keyframes ripple {
+	from {width:0;height:0;opacity:1;}
+	to {width:47px;height:47px;opacity:0;}
+}
+
+.value_screen .form .file {
+    margin-bottom: 25px;
+}
+
+.form .file label {
+    display: block;
+    box-sizing: border-box;
+    border: 2px dashed rgb(215, 215, 215);
+    height: 62px;
+    width: 100%;
+    font-size: 17px;
+    font-family: "ProximaNova";
+    color: rgb(96, 96, 96);
+    font-weight: 400;
+    text-align: left;
+    outline: none;
+    padding: 17px 71px;
+    margin: 20px 0 10px;
+    position: relative;
+}
+
+.form .file label::before {
+    content: "";
+    background-image: url(../img/sprites.svg);
+    background-position: -117px -636px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 18px;
+    top: 13px;
+}
+
+.value_screen .form .file .for_example {
+    font-family: "ProximaNova";
+    font-size: 17px;
+    font-weight: 400;
+    color: rgb(152, 152, 152);
+}
+
+
+
+
+
+
+
+/*thanks*/
+
+.thanks {
+    padding: 290px 0;
+}
+
 /*media*/
 
 @media screen and (max-width: 1279px) {
@@ -480,31 +717,36 @@ header .phones .free {
         padding: 72px 35px 47px;
     }
     
-    .advantages_screen h2 {
+    h2 {
         font-size: 34px;
     }
 
-    .advantages_screen .process {
+    .caption {
         font-size: 26px;
+        padding: 20px 0 52px;
     }
     
     .advantages_screen .advantages .items {
         width: 100%;
+        padding: 5px 15px 5px 75px;
     }
     
     .advantages_screen .advantages .items .inner {
-        max-width: 400px;
         margin: 0 auto;
     }
     
+    .advantages_screen .advantages .item {
+        margin: 47px auto;
+        max-width: 405px;
+    }
+
     .advantages_screen .advantages .video {
         width: 100%;
-        margin: 0 auto;
-        padding: 46px 0;
+        padding: 46px 15px;
     }
     
     .advantages_screen .advantages .video .inner {
-        max-width: 600px;
+        max-width: 546px;
         margin: 0 auto;
     }
 }
@@ -520,14 +762,15 @@ header .phones .free {
     }
     
     .main_screen .example img {
-        position: relative;
+        position: static;
+        margin-top: -20px;
         max-width: 550px;
         width: 100%;
     }
     
     .main_screen .circle {
-        left: -105px;
-        top: 221px;
+        left: -42px;
+        top: 219px;
     }
     
     .main_screen .form {
@@ -536,6 +779,7 @@ header .phones .free {
         border-left: none;
         border-right: none;
         padding: 72px 15px 47px;
+        margin-top: 7px;
     }
     
     .main_screen .form .form_wrapper {
@@ -543,6 +787,17 @@ header .phones .free {
         margin: 0 auto;
     }
     
+    .advantages_screen {
+        padding: 108px 0 250px;
+    }   
+}
+
+@media screen and (max-width: 767px) {
+    .value_screen .form {
+        margin: 0 15px;
+        max-width: 767px;
+        padding: 64px 20px 47px;
+    }
 }
 
 @media screen and (max-width: 669px) {
@@ -569,6 +824,34 @@ header .phones .free {
         margin: 0 auto;
     }
     
+    .main_screen .circle {
+        position: static;
+        width: 100%;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+    
+    .main_screen .circle .text {
+        text-align: center;
+    }
+    
+    .main_screen .circle::before, .main_screen .circle::after {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .advantages_screen .advantages .video .to_learn {
+        max-width: 300px;
+    }
+    
+    .advantages_screen .advantages .video .to_learn::before {
+        left: -22px;
+        top: -2px;
+    }
 }
 
 
