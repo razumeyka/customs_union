@@ -9,16 +9,14 @@
 <body>
     <header>
         <div class="first_line">
-            <div class="wrapper">
+            <div class="wrapper between ">
                 <div class="group">группа органов по сертификации</div>
                 <div class="territory">Работаем по всей России</div>
             </div>
         </div>
         <div class="second_line">
-            <div class="wrapper">
-                <div class="logo_wrapper">
-                    <div class="logo"></div>
-                </div>
+            <div class="wrapper between ">
+                <div class="logo"></div>
                 <div class="phones">
                     <div class="handset"></div>
                     <div class="inner">
@@ -31,7 +29,7 @@
         </div>
     </header>
     <section class="main_screen">
-        <div class="wrapper">
+        <div class="wrapper between">
             <div class="example">
                 <img src="img/doc_type_1.png" alt="">
                 <div class="circle">
@@ -45,13 +43,13 @@
                 <div class="figures">от 35 000 рублей за 15 дней</div>
                 <div role="form" class="wpcf7" id="wpcf7-f4-o1" lang="ru-RU" dir="ltr">
                     <form class="wpcf7-form">
-                        <span class="wpcf7-form-control-wrap input">
+                        <span class="wpcf7-form-control-wrap input_wr">
                             <input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ваше имя">
                         </span>
-                        <span class="wpcf7-form-control-wrap input">
+                        <span class="wpcf7-form-control-wrap input_wr">
                             <input type="text" name="number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Номер телефона">
                         </span>
-                        <span class="wpcf7-form-control-wrap username">
+                        <span class="wpcf7-form-control-wrap button_wr">
                             <button class="button">получить консультацию</button>
                         </span>
                     </form>
@@ -69,11 +67,26 @@
         <div class="advantages">
             <div class="items">
                 <div class="inner">
-                    <div class="first item">Каждый клиент получает <b>гарантию</b> легальности в договоре</div>
-                    <div class="second item">Еще ни один выданый сертификат не был отозван по вине органа</div>
-                    <div class="third item">Работа <b>в строгом соответствии</b> с ТР ТС и ГОСТ Р 51000.5-96 «Беспристрастность»</div>
-                    <div class="fourth item">Ежегодное повышение квалификации экспертов</div>
-                    <div class="fifth item">Испытания в <b>аккредитованных</b> по всем показателям лабораториях</div>
+                    <div class="first item">
+                        <div class="number">1</div>
+                        <div class="text">Каждый клиент получает <b>гарантию</b> легальности в договоре</div>
+                        </div>
+                    <div class="second item">
+                        <div class="number">2</div>
+                        <div class="text">Еще ни один выданый сертификат не был отозван по вине органа</div>
+                    </div>
+                    <div class="third item">
+                        <div class="number">3</div>
+                        <div class="text">Работа <b>в строгом соответствии</b> с ТР ТС и ГОСТ Р 51000.5-96 «Беспристрастность»</div>
+                    </div>
+                    <div class="fourth item">
+                        <div class="number">4</div>
+                        <div class="text">Ежегодное повышение квалификации экспертов</div>
+                    </div>
+                    <div class="fifth item">
+                        <div class="number">5</div>
+                        <div class="text">Испытания в <b>аккредитованных</b> по всем показателям лабораториях</div>
+                    </div>
                 </div>
             </div>
             <div class="video">
@@ -93,13 +106,13 @@
                 <div class="value_caption">Декларации TP TC</div>
                 <div role="form" class="wpcf7" id="wpcf7-f4-o1" lang="ru-RU" dir="ltr">
                     <form class="wpcf7-form">
-                        <span class="wpcf7-form-control-wrap input">
+                        <span class="wpcf7-form-control-wrap input_wr">
                             <input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Наименование продукции">
                         </span>
-                        <span class="wpcf7-form-control-wrap input">
+                        <span class="wpcf7-form-control-wrap input_wr">
                             <input type="text" name="practice" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Область применения">
                         </span>
-                        <span class="wpcf7-form-control-wrap username">
+                        <span class="wpcf7-form-control-wrap input_wr textarea">
                             <textarea type="text" name="description" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Описание продукции (Например, напряжение 600 киловатт, включение через Wi-Fi и т.п.)"></textarea>
                         </span>
                         <div class="term">
@@ -132,7 +145,7 @@
                         </div>
                         <div class="file">
                             <div class="label">Прикрепите существующие документы:</div>
-                            <label>
+                            <label class="input_wr">
                                 <span class="wpcf7-form-control-wrap">
                                     <input type="file" name="file-554" size="40" class="wpcf7-form-control wpcf7-file" aria-invalid="false">
                                     <span>Прикрепить файлы</span>
@@ -140,7 +153,7 @@
                             </label>
                             <div class="for_example">(тех. условия, паспорт изделия и т.д.)</div>
                         </div>
-                        <span class="wpcf7-form-control-wrap username">
+                        <span class="wpcf7-form-control-wrap button_wr">
                             <button class="button">узнать стоимость</button>
                         </span>   
                     </form>
@@ -155,6 +168,49 @@
            <div class="caption">нами сертифицировано уже более 350 организаций по всей россии</div>
         </div> 
     </section>
+    <section class="question_answer">
+        <div class="wrapper">
+            <h2>ответы на поппулярные вопросы по сертификации</h2>
+            <div class="caption">Обращайтесь за консультацией по вопросам сертифицирования к экспертам ЕСЦТС!</div>
+            <div class="question">
+                <div class="text">Кто может выдавать сертификат ISO?</div>
+            </div>
+            <div class="answer">
+               <p>может выдавать сертификат ISO</p>
+            </div>
+            <div class="question">
+                <div class="text">Стоимость ISO?</div>
+            </div>
+            <div class="answer">
+                <p></p>
+            </div>
+            <div class="question">
+                <div class="text">Сколько стоит документация?</div>
+            </div>
+            <div class="answer">    
+                <p></p>
+            </div>
+            <div class="question">
+                <div class="text">Сколько стоит внедрение ISO, OHSAS, HACCP?</div>
+            </div>
+            <div class="answer">
+               <p></p>
+            </div>
+            <div class="question">
+                <div class="text">Сколько стоит документация?</div>
+            </div>
+            <div class="answer">
+                <p></p>
+            </div>
+            <div class="question">
+                <div class="text">Сколько стоит внедрение ISO, OHSAS, HACCP?</div>
+            </div>
+            <div class="answer">    
+                <p></p>
+            </div>
+        </div>
+    </section>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>

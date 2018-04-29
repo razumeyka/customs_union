@@ -6,4 +6,10 @@ $(document).ready(function(){
         $(this).addClass('active');
         $(this).parent().addClass('changed');
     });
+    
+    $(".answer").hide();
+    $(".question").click(function(){
+        $(this).next().slideToggle(500);
+		$(this).toggleClass('active');
+    });
 });

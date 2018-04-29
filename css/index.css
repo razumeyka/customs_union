@@ -49,7 +49,7 @@
 body{
 	margin:0;
 	padding: 0;
-	font-family: 'ProximaNovaCond', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-size: 15px;
 	line-height:1.4;
     letter-spacing: 0.05em;
@@ -71,21 +71,19 @@ header {
 
 header .first_line {
     background-color: #304a9a;
-    font-family: 'ProximaNova';
     font-size: 16px;
     color: rgb(255, 255, 255);
     font-weight: 400;
     padding: 10px 0;
 }
 
-header .first_line .wrapper, header .second_line .wrapper, .main_screen .wrapper {
+.between {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 header .first_line .group {
-    text-align: left;
     text-transform: uppercase;
 }
 
@@ -110,8 +108,6 @@ header .second_line {
 }
 
 header .logo {
-    display: inline-block;
-    vertical-align: middle;
     background-image: url(../img/sprites.svg);
     background-position: -7px -1px;
     width: 310px;
@@ -134,20 +130,16 @@ header .phones .inner {
 }
 
 header .phones a {
-    font-family: 'ProximaNova';
     font-size: 24px;
     color: rgb(20, 31, 64);
     font-weight: 700;
-    text-align: left;
     text-decoration: none;
 }
 
 header .phones .free {
-    font-family: 'ProximaNova';
     font-size: 14px;
     color: rgb(48, 74, 154);
     font-weight: 400;
-    text-align: left;
 }
 
 /*main_screen*/
@@ -237,6 +229,7 @@ header .phones .free {
 }
 
 .main_screen .circle .text {
+    font-family: 'ProximaNovaCond';
     font-size: 18px;
     color: rgb(20, 31, 64);
     font-weight: 400;
@@ -257,6 +250,7 @@ header .phones .free {
 }
 
 .main_screen .form h1 {
+    font-family: 'ProximaNovaCond';
     font-size: 38px;
     font-weight: 900;
     color: rgb(20, 31, 64);
@@ -266,6 +260,7 @@ header .phones .free {
 }
 
 .main_screen .form .figures {
+    font-family: 'ProximaNovaCond';
     font-size: 26px;
     font-weight: 400;
     color: rgb(36, 55, 115);
@@ -274,19 +269,29 @@ header .phones .free {
     padding: 10px 0;
 }
 
-.form .input .wpcf7-form-control {
+.form .input_wr {
+    display: block;
+    margin: 9px 0 17px;
+}
+
+.form .input_wr .wpcf7-form-control {
+    display: block;
     box-sizing: border-box;
-    border: 1px solid rgb(203, 203, 203);
     height: 62px;
     width: 100%;
-    font-family: "ProximaNova";
     font-size: 17px;
-    color: rgb(96, 96, 96);
-    font-weight: 400;
-    text-align: left;  
+    font-weight: 400; 
     outline: none;
-    padding-left: 20px;
-    margin: 9px 0;
+    padding: 10px 20px;
+}
+
+.form input:not([type=submit]):focus {
+	border: 1px solid #000082;
+}
+
+.form .button_wr {
+    display: block;
+    margin: 28px 0 13px;
 }
 
 .button {
@@ -300,17 +305,17 @@ header .phones .free {
     text-decoration: none;
     outline: none;
     padding: 30px;
-    margin: 20px 0 13px;
+    font-family: 'ProximaNovaCond';
     font-size: 19px;
     color: rgb(255, 255, 255);
     font-weight: 700;
 }
 
 .form .guarantee {
+    font-family: 'ProximaNovaCond';
     font-size: 16px;
     font-weight: 400;
     color: rgb(124, 124, 124);
-    text-align: left;
     padding-left: 24px;
     position: relative;
 } 
@@ -328,25 +333,28 @@ header .phones .free {
 /*advantages*/
 
 .advantages_screen {
-    padding: 150px 0 250px;
+    padding: 148px 0 300px;
 }
 
 h2 {
+    font-family: 'ProximaNovaCond';
     font-size: 42px;
     font-weight: 900;
     color: rgb(20, 31, 64);
     text-transform: uppercase;
     text-align: center;
+    line-height: 1.15;
     margin: 0;
 }
 
 .caption {
+    font-family: 'ProximaNovaCond';
     font-size: 30px;
     font-weight: 400;
     color: rgb(48, 74, 154);
     text-transform: uppercase;
     text-align: center;
-    padding: 13px 0 50px;
+    padding: 13px 0 48px;
 }
  
 .advantages_screen .advantages {
@@ -358,57 +366,42 @@ h2 {
     box-sizing: border-box;
     background-color: #304a9a;
     width: 50%;
-    padding: 5px 127px 5px 0;
 }
 
 .advantages_screen .advantages .items .inner {
     max-width: 600px;
+    padding: 23px 123px 19px 0;
     margin: 0 0 0 auto;
 }
 
-.advantages_screen .advantages .item {
-    box-sizing: border-box;
-    border-left: 1px solid rgb(255, 255, 255);
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "ProximaNova";
-    color: rgb(255, 255, 255);
-    line-height: 1.75;
-    text-transform: uppercase;
-    padding-left: 20px;
-    margin: 47px 0 47px auto;
-    position: relative;
-    max-width: 405px;
+.advantages_screen .advantages .items .item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.advantages_screen .advantages .item::before {
-    content: "1";
+.advantages_screen .advantages .item .number {
+    display: inline-block;
     font-size: 80px;
     font-weight: 900;
-    font-family: "ProximaNova";
     color: rgb(255, 211, 90);
-    line-height: 0.6;
-    position: absolute;
-    width: 47px;
-    height: 54px;
-    left: -67px;
-    top: 5px;
+    line-height: 1.3;
+    margin-right: 18px;
 }
 
-.advantages_screen .advantages .second.item::before {
-    content: "2";
-}
-
-.advantages_screen .advantages .third.item::before {
-    content: "3";
-}
-
-.advantages_screen .advantages .fourth.item::before {
-    content: "4";
-}
-
-.advantages_screen .advantages .fifth.item::before {
-    content: "5";
+.advantages_screen .advantages .item .text {
+    display: inline-block;
+    box-sizing: border-box;
+    border-left: 2px solid rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    line-height: 1.6;
+    text-transform: uppercase;
+    padding-left: 20px;
+    position: relative;
+    max-width: 405px;
 }
 
 .advantages_screen .advantages .video {
@@ -419,14 +412,15 @@ h2 {
 }
 
 .advantages_screen .advantages .video .inner {
+    box-sizing: border-box;
     max-width: 600px;
     margin: 0 auto 0 0;
+    padding-left: 60px;
 }
 
 .advantages_screen .advantages .video .to_learn {
     font-size: 16px;
     font-weight: 400;
-    font-family: "ProximaNova";
     color: rgb(48, 74, 154);
     text-align: right;
     line-height: 1.25;
@@ -452,7 +446,7 @@ h2 {
     background-position: center center;
     max-width: 546px;
     height: 346px;
-    margin: 25px 0 13px auto;
+    margin: 25px 0 13px;
     position: relative;
 }
 
@@ -471,6 +465,7 @@ h2 {
 }
 
 .advantages_screen .advantages .video .position {
+    font-family: 'ProximaNovaCond';
     font-size: 18px;
     font-weight: 400;
     color: rgb(20, 31, 64);
@@ -478,6 +473,7 @@ h2 {
 }
 
 .advantages_screen .advantages .video .name {
+    font-family: 'ProximaNovaCond';
     font-size: 22px;
     font-weight: 700;
     color: rgb(20, 31, 64);
@@ -498,19 +494,18 @@ h2 {
     box-sizing: border-box;
     border: 6px solid rgb(255, 211, 90);
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
     max-width: 660px;
     position: absolute;
     top: -140px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    padding: 64px 74px 47px;
-    text-align: left;
+    padding: 61px 74px 47px;
 }
 
 .value_screen .form .value {
-    font-size: 38px;
+    font-family: 'ProximaNovaCond';
+    font-size: 42px;
     font-weight: 900;
     color: rgb(20, 31, 64);
     text-transform: uppercase;
@@ -518,39 +513,27 @@ h2 {
 }
 
 .value_screen .form .value_caption {
-    font-size: 26px;
+    font-family: 'ProximaNovaCond';
+    font-size: 30px;
     font-weight: 400;
     color: rgb(36, 55, 115);
     text-transform: uppercase;
     text-align: center;
-    margin: 13px 0 24px;
+    margin: 7px 0 24px;
 }
 
-.value_screen .form .wpcf7-form-control-wrap textarea {
-    display: block;
-    box-sizing: border-box;
-    border: 1px solid rgb(203, 203, 203);
+.value_screen .form .input_wr.textarea .wpcf7-form-control {
     height: 170px;
-    width: 100%;
-    font-family: "ProximaNova";
-    font-size: 17px;
-    color: rgb(96, 96, 96);
-    font-weight: 400; 
-    outline: none;
-    resize: none;
-    padding: 20px;
-    margin: 9px 0;
 }
 
 .value_screen .form .label {
     font-size: 20px;
-    font-family: "ProximaNova";
     color: rgb(0, 0, 0);
     font-weight: 700;
 }
 
 .value_screen .form .term {
-    margin: 24px 0 27px;
+    margin: 24px 0 25px;
 }
 
 .value_screen .form .term .wpcf7-form-control-wrap {
@@ -560,12 +543,11 @@ h2 {
 
 .value_screen .form .term .wpcf7-list-item {
     display: inline-block;
-    padding: 10px 35px 10px 30px;
+    padding: 10px 35px 10px 0;
 }
 
 .value_screen .form .term .wpcf7-list-item .wpcf7-list-item-label {
     font-size: 17px;
-    font-family: "ProximaNova";
     color: rgb(0, 0, 0);
     padding-left: 5px;
 }
@@ -578,11 +560,11 @@ h2 {
 
 .value_screen .form .term .wpcf7-list-item .radio_ripple {
     display: inline-block;
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     border: 3px solid rgb(196, 196, 196);
     position: relative;
-    margin: 0 5px 0 -30px;
+    margin-right: 5px;
     border-radius: 50%;
     box-sizing: border-box;
     vertical-align: middle;
@@ -598,8 +580,8 @@ h2 {
     left: -10px;
     right: -10px;
     margin: auto;
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     background: rgb(70, 174, 255);
     border-radius: 50%;
     z-index: 1;
@@ -652,20 +634,10 @@ h2 {
     margin-bottom: 25px;
 }
 
-.form .file label {
-    display: block;
-    box-sizing: border-box;
+.form .file .input_wr {
     border: 2px dashed rgb(215, 215, 215);
-    height: 62px;
-    width: 100%;
-    font-size: 17px;
-    font-family: "ProximaNova";
-    color: rgb(96, 96, 96);
-    font-weight: 400;
-    text-align: left;
-    outline: none;
-    padding: 17px 71px;
-    margin: 20px 0 10px;
+    padding: 17px 17px 17px 71px;
+    margin: 22px 0 14px;
     position: relative;
 }
 
@@ -681,13 +653,14 @@ h2 {
 }
 
 .value_screen .form .file .for_example {
-    font-family: "ProximaNova";
     font-size: 17px;
     font-weight: 400;
     color: rgb(152, 152, 152);
 }
 
-
+.value_screen .form .button_wr {
+    margin: 40px 0 13px;
+}
 
 
 
@@ -697,6 +670,56 @@ h2 {
 
 .thanks {
     padding: 290px 0;
+}
+
+/*question_answer*/
+
+.question_answer .caption {
+    padding: 9px 0 37px;
+}
+
+.question_answer .question {
+    box-sizing: border-box;
+    background-color: #304a9a;
+    padding: 17px 70px 20px 31px;
+    margin-top: 30px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    position: relative;
+	cursor:pointer;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+.question_answer .question:after {
+    content: "+";
+    font-size: 40px;
+    font-weight: 900;
+    font-family: "ProximaNova";
+    color: rgb(255, 255, 255);
+    line-height: 78px;
+    text-align: center;
+    width: 70px;
+    background-color: #46aeff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    font-weight: normal;
+}
+
+.question_answer .question.active:after {
+	content:'-';
+    line-height: 68px;
+}
+
+.question_answer .answer {
+	box-sizing: border-box;
+    background-color: #f9f9f9;
+    padding: 30px 20px; 
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    position: relative;
+    font-size: 16px;
 }
 
 /*media*/
@@ -728,16 +751,16 @@ h2 {
     
     .advantages_screen .advantages .items {
         width: 100%;
-        padding: 5px 15px 5px 75px;
+        padding: 23px 15px 24px;
     }
     
     .advantages_screen .advantages .items .inner {
         margin: 0 auto;
+        padding: 0;
     }
     
-    .advantages_screen .advantages .item {
-        margin: 47px auto;
-        max-width: 405px;
+    .advantages_screen .advantages .items .item {
+        justify-content: center;
     }
 
     .advantages_screen .advantages .video {
@@ -748,6 +771,7 @@ h2 {
     .advantages_screen .advantages .video .inner {
         max-width: 546px;
         margin: 0 auto;
+        padding-left: 0;
     }
 }
 
@@ -796,32 +820,13 @@ h2 {
     .value_screen .form {
         margin: 0 15px;
         max-width: 767px;
-        padding: 64px 20px 47px;
+        padding: 64px 15px 47px;
     }
 }
 
-@media screen and (max-width: 669px) {
-    
-    header .first_line .group {
-        width: 100%;
-        text-align: center;
-    }
-    
-    header .first_line .territory {
-        margin: 0 auto;
-    }
-    
-    header .second_line .wrapper {
-        text-align: center;
-    }
-    
-    header .second_line .logo_wrapper {
-        width: 100%;
-        margin: 0 auto;
-    }
-    
-    header .second_line .phones {
-        margin: 0 auto;
+@media screen and (max-width: 639px) {
+    .between {
+        justify-content: center;
     }
     
     .main_screen .circle {
@@ -841,9 +846,6 @@ h2 {
         display: none;
     }
     
-}
-
-@media screen and (max-width: 500px) {
     .advantages_screen .advantages .video .to_learn {
         max-width: 300px;
     }
