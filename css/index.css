@@ -62,10 +62,6 @@ button,input,select,textarea{
     font-size: 17px;
 }
 
-textarea{
-    line-height: 1.6;
-}
-
 .wrapper {
      max-width:1200px;
      padding:0 40px;
@@ -173,8 +169,8 @@ header .phones .free {
     width: 350px;
     height: 350px;
     position: absolute;
-    left: 320px;
-    top: 220px;
+    left: 297px;
+    top: 194px;
 }
 
 .main_screen .circle {
@@ -332,10 +328,10 @@ header .phones .free {
     text-decoration: none;
     outline: none;
     padding: 30px;
-    font-family: 'ProximaNovaCond';
     font-size: 19px;
     color: rgb(255, 255, 255);
     font-weight: 700;
+    letter-spacing: 1.3px;
 }
 
 .form .guarantee {
@@ -518,7 +514,7 @@ h2 {
 .value_screen .form {
     box-sizing: border-box;
     border: 6px solid rgb(255, 211, 90);
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     max-width: 660px;
     position: absolute;
     top: -140px;
@@ -528,7 +524,7 @@ h2 {
     padding: 61px 74px 47px;
 }
 
-.value_screen .form .value {
+.form .form_caption1 {
     font-family: 'ProximaNovaCond';
     font-size: 42px;
     font-weight: 900;
@@ -537,7 +533,7 @@ h2 {
     text-align: center;
 }
 
-.value_screen .form .value_caption {
+.form .form_caption2 {
     font-family: 'ProximaNovaCond';
     font-size: 30px;
     font-weight: 400;
@@ -547,10 +543,11 @@ h2 {
     margin: 7px 0 24px;
 }
 
-.value_screen .form .input_wr.textarea .wpcf7-form-control {
+.form .input_wr.textarea .wpcf7-form-control {
     height: 170px;
     max-width:100%;
     padding: 15px 20px;
+    line-height: 1.6;
 }
 
 .value_screen .form .label {
@@ -581,7 +578,7 @@ h2 {
 
 /*radio_button*/
 
-.value_screen .form input[type="radio"], .value_screen .form input[type="file"] {
+.value_screen .form input[type="radio"], .value_screen .form input[type="file"], .question_form .form input[type="file"] {
     display: none;
 }
 
@@ -692,11 +689,15 @@ h2 {
 /*thanks*/
 
 .thanks {
-    padding: 290px 0 35px;
+    padding: 290px 0 30px;
+}
+
+.thanks .caption {
+    padding: 13px 0 2px;
 }
 
 .thanks .envelopes {
-    padding-top: 70px;
+    padding-bottom: 120px;
     display: flex;
     flex-wrap: wrap;
     margin: 0 -30px;
@@ -705,12 +706,14 @@ h2 {
 .thanks .envelopes .thank {
     box-sizing: border-box;
     width: 25%;
-    padding: 100px 30px;
+    padding: 0 30px;
 }
 
 .thanks .envelopes .thank .envelope_wrapper {
     position: relative; 
     width: 100%;
+    height: 417px;
+    cursor:pointer;
 }
 
 .thanks .envelopes .thank .background {
@@ -718,8 +721,10 @@ h2 {
     width: 248px;
     height: 100px;
     position: absolute;
+    bottom: 86px;
     left: 18px;
-    top: 17px;
+    right: 18px;
+    margin: 0 auto;
 }
 
 .thanks .envelopes .thank .letter {
@@ -728,8 +733,10 @@ h2 {
     width: 236px;
     height: 246px;
     position: absolute;
+    bottom: 66px;
     left: 24px;
-    top: -108px;
+    right: 24px;
+    margin: 0 auto;
     -webkit-transition: top 0.2s ease-in 0s;
     transition: top 0.2s ease-in 0s;
 }
@@ -750,7 +757,7 @@ h2 {
 }
 
 .thanks .envelopes .thank:hover .letter {
-    top: -128px;
+    bottom: 86px;
 }
 
 .thanks .envelopes .thank:hover .letter::after {
@@ -758,48 +765,52 @@ h2 {
 }
 
 .thanks .envelopes .thank .envelope {
-    position: relative;
-}
-
-.thanks .envelopes .thank .envelope img {
+    background-image: url(../img/envelope.png);
+    background-size: 286px;
     width: 285px;
+    height: 205px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .thanks .envelopes .thank .logo {
     background-image: url(../img/clients_logos.png);
-    background-position: -110px -12px;
+    background-position: -1px -12px;
     width: 125px;
-    height: 65px;
+    height: 51px;
     text-align: center;
-    margin: 0 auto;
+    margin: 23px auto 0;
 }
 
 .thanks .envelopes .thank.magnit .logo {
-    background-position: -2px -87px;
+    background-position: -1px -87px;
 }
 
 .thanks .envelopes .thank.bayer .logo {
-    background-position: -2px -161px;
+    background-position: -1px -161px;
 }
 
 .thanks .envelopes .thank.onduline .logo {
-    background-position: -2px -232px;
+    background-position: -1px -232px;
 }
 
 .thanks .envelopes .thank.knauf .logo {
-    background-position: -2px -307px;
+    background-position: -1px -307px;
 }
 
 .thanks .envelopes .thank.jcb .logo {
-    background-position: -2px -380px;
+    background-position: -1px -380px;
 }
 
 .thanks .envelopes .thank.vimm .logo {
-    background-position: -2px -448px;
+    background-position: -1px -448px;
 }
 
 .thanks .envelopes .thank.tarkett .logo {
-    background-position: -2px -532px;
+    background-position: -1px -532px;
 }
 
 
@@ -850,6 +861,112 @@ h2 {
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     position: relative;
     font-size: 16px;
+}
+
+/*question_form*/
+
+.question_form {
+    padding: 90px 0;
+}
+
+.question_form .form {
+    box-sizing: border-box;
+    border: 6px solid rgb(255, 211, 90);
+    width: 100%;
+    margin: 0 auto;
+    padding: 59px 74px 40px;
+    text-align: center;
+}
+
+.question_form .form .form_caption1 {
+    display: inline-block;
+    margin: 0 0 17px;
+}
+
+.question_form .form .form_caption2 {
+    display: inline-block;
+    font-size: 42px;
+    color: rgb(20, 31, 64);
+    margin: 0 0 17px;
+}
+
+.question_form .form .wpcf7-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+    text-align: left;
+}
+
+.question_form .form .wpcf7-form .first_column {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0 20px;
+}
+
+.question_form .form .wpcf7-form .second_column {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0 20px;
+}
+
+.question_form .form .input_wr.textarea .wpcf7-form-control{
+    height: 140px;
+}
+
+.question_form .form .button_wr {
+    margin: 21px 0 13px;
+}
+
+.question_form .form .button {
+    padding: 18px;
+    font-family: "ProximaNova";
+    letter-spacing: 1.5px;
+}
+
+/*declaration_info*/
+
+.declaration_info {
+    padding: 65px 0;
+    color: rgb(20, 31, 64);
+}
+
+.declaration_info h3 {
+    font-size: 42px;
+    font-family: "ProximaNovaCond";
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 36px;
+} 
+
+.declaration_info p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.4px;
+}
+
+.declaration_info h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 31px 0;
+    
+}
+
+.declaration_info a {
+    display: block;
+    font-size: 17px;
+    color: rgb(48, 74, 154);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: right;
+    margin: 20px 0 0 auto;
+    letter-spacing: 1.3px;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(48, 74, 154);
+    padding: 5px 0;
+    width: 193px;
 }
 
 /*media*/
@@ -955,6 +1072,18 @@ h2 {
         margin: 0 15px;
         max-width: 767px;
         padding: 64px 15px 47px;
+    }
+    
+    .question_form .form {
+        padding: 59px 15px 40px;
+    }
+    
+    .question_form .form .wpcf7-form .first_column {
+        width: 100%;
+    }
+    
+    .question_form .form .wpcf7-form .second_column {
+        width: 100%;
     }
 }
 
