@@ -12,4 +12,11 @@ $(document).ready(function(){
         $(this).next().slideToggle(500);
 		$(this).toggleClass('active');
     });
+        
+    $(".second_part").slideUp(500);
+    $(".more_info").click(function(event){
+        event.preventDefault();
+        $('.second_part').slideDown(500);
+		$('.more_info').toggleClass('active');
+    });
 });

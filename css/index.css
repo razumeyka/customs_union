@@ -138,6 +138,7 @@ header .phones .inner {
 header .phones a {
     font-size: 24px;
     font-weight: 700;
+    color: rgb(20, 31, 64);
     text-decoration: none;
 }
 
@@ -222,9 +223,18 @@ header .phones .free {
     height: 0;
     border-radius: 50%;
     background-color: rgba(255, 228, 152, 0.29);
-    -webkit-animation: pulse 0.7s ease-out infinite;
-	animation: pulse 0.7s ease-out infinite;
+    -webkit-animation: pulse1 0.6s ease-out infinite;
+	animation: pulse1 0.6s ease-out infinite;
     z-index: 1;
+}
+
+@-webkit-keyframes pulse1 {
+	from {width:298px;height:298px;}
+	to {width:315px;height:315px;}
+}
+@keyframes pulse1 {
+	from {width:298px;height:298px;}
+	to {width:315px;height:315px;}
 }
 
 .main_screen .circle_wr .wave_2 {
@@ -238,16 +248,16 @@ header .phones .free {
     height: 0;
     border-radius: 50%;
     background-color: rgba(255, 228, 152, 0.161);
-    -webkit-animation: pulse 0.7s ease-out infinite;
-	animation: pulse 0.7s ease-out infinite;
+    -webkit-animation: pulse2 0.7s ease-out infinite;
+	animation: pulse2 0.7s ease-out infinite;
     z-index: 0;
 }
 
-@-webkit-keyframes pulse {
+@-webkit-keyframes pulse2 {
 	from {width:298px;height:298px;}
 	to {width:335px;height:335px;}
 }
-@keyframes pulse {
+@keyframes pulse2 {
 	from {width:298px;height:298px;}
 	to {width:335px;height:335px;}
 }
@@ -289,6 +299,7 @@ header .phones .free {
 .form .input_wr .wpcf7-form-control {
     display: block;
     box-sizing: border-box;
+    border: 1px solid rgb(218, 218, 218);
     height: 62px;
     width: 100%;
     font-size: 17px;
@@ -301,7 +312,7 @@ header .phones .free {
     border: 1px solid #ffffff;
 }
 
-.form input:not([type=submit]):focus {
+.form input:not([type=submit]):focus, .form .input_wr.textarea .wpcf7-form-control:focus {
 	border: 1px solid #000082;
 }
 
@@ -498,7 +509,7 @@ h2 {
 /*value_screen*/
 
 .value_screen {
-    position: relative; 
+    position: relative;
 }
 
 .value_screen .background {
@@ -506,6 +517,11 @@ h2 {
     background-size: cover;
     background-position: center center;
     height: 743px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
 }
 
 .value_screen .form {
@@ -513,11 +529,12 @@ h2 {
     border: 6px solid rgb(255, 211, 90);
     background-color: #ffffff;
     max-width: 660px;
-    margin: -883px auto 0;
+    margin: 0 auto;
     padding: 61px 74px 47px;
+    position: relative;
 }
 
-.form .form_caption1 {
+.form .form_caption {
     font-family: 'ProximaNovaCond';
     font-size: 42px;
     font-weight: 900;
@@ -525,7 +542,7 @@ h2 {
     text-align: center;
 }
 
-.form .form_caption2 {
+.form h3 {
     font-family: 'ProximaNovaCond';
     font-size: 30px;
     font-weight: 400;
@@ -537,7 +554,7 @@ h2 {
 
 .form .input_wr.textarea .wpcf7-form-control {
     height: 170px;
-    max-width:100%;
+    width:100%;
     padding: 15px 20px;
     line-height: 1.6;
 }
@@ -651,6 +668,9 @@ h2 {
 }
 
 .form .file .input_wr {
+    font-size: 17px;
+    font-weight: 400;
+    color: rgb(96, 96, 96);
     border: 2px dashed rgb(215, 215, 215);
     padding: 17px 17px 17px 71px;
     margin: 22px 0 14px;
@@ -851,7 +871,7 @@ h2 {
 .question_answer .answer {
 	box-sizing: border-box;
     background-color: #f9f9f9;
-    padding: 17px 100px 20px 31px;
+    padding: 17px 31px 20px 31px;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     position: relative;
     font-size: 16px;
@@ -872,12 +892,12 @@ h2 {
     text-align: center;
 }
 
-.question_form .form .form_caption1 {
+.question_form .form h3 {
     display: inline-block;
     margin: 0 0 17px;
 }
 
-.question_form .form .form_caption2 {
+.question_form .form h4 {
     display: inline-block;
     font-size: 42px;
     margin: 0 0 17px;
@@ -942,10 +962,9 @@ h2 {
     font-size: 17px;
     font-weight: 700;
     margin: 31px 0;
-    
 }
 
-.declaration_info a {
+.declaration_info .more_info {
     display: block;
     font-size: 17px;
     color: rgb(48, 74, 154);
@@ -959,6 +978,10 @@ h2 {
     border-bottom: 2px solid rgb(48, 74, 154);
     padding: 5px 0;
     width: 193px;
+}
+
+.declaration_info .more_info.active {
+    display: none;
 }
 
 /*contacts*/
@@ -980,12 +1003,12 @@ h2 {
     margin-bottom: 50px;
 }
 
-.contacts .info .info_caption {
+.contacts .info h4 {
     font-size: 28px;
     font-family: "ProximaNovaCond";
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 9px;
+    margin: 0 0 9px;
 } 
 
 .contacts .info .address .comment {
@@ -995,8 +1018,6 @@ h2 {
 
 .contacts .info .mail a {
     color: rgb(0, 151, 229);
-    text-decoration: none;
-    border-bottom: 1px solid rgb(0, 151, 229);
 }
 
 .contacts .photo {
@@ -1009,6 +1030,11 @@ h2 {
 }
 
 /*map*/
+
+.map {
+    font-size: 0;
+    line-height: 0;
+}
 
 .map iframe {
     width: 100%;
@@ -1028,8 +1054,6 @@ footer {
 
 footer a {
     color: rgb(255, 255, 255);
-    text-decoration: none;
-    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 
@@ -1114,7 +1138,6 @@ footer a {
         border-left: none;
         border-right: none;
         padding: 72px 15px 47px;
-        margin-top: 7px;
     }
     
     .main_screen .form .form_wrapper {
@@ -1169,6 +1192,7 @@ footer a {
     .main_screen .circle_wr {
         position: static;
         width: 100%;
+        height: 100%;
     }
     
     .main_screen .circle {
