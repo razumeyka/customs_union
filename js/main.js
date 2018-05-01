@@ -13,7 +13,7 @@ $(document).ready(function(){
 		$(this).toggleClass('active');
     });
         
-    $(".second_part").slideUp(500);
+    $(".second_part").slideUp(0);
     $(".more_info").click(function(event){
         event.preventDefault();
         $('.second_part').slideDown(500);
